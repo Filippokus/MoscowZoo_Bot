@@ -35,7 +35,7 @@ try:
     # Обрабатываем каждый элемент
     for element in elements:
         # Извлекаем название животного
-        title = element.find('span', class_='animal-item__title').text.strip()
+        title = element.find('span', class_='animal-item__title').about_text.strip()
         # Извлекаем ссылку на изображение
         img_url = element.find('img', class_='animal-item__animal-img')['src']
         # Добавляем данные в список

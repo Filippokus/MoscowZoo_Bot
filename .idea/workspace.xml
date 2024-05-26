@@ -4,20 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e85c22a8-1bc1-46a6-b22a-2fcbef3fd250" name="Changes" comment="added main.py">
-      <change afterPath="$PROJECT_DIR$/app/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/common/bot_cmds_list.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/handlers/get_animal_pic.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/handlers/user_private.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/picture/get_picture_animal.py" afterDir="false" />
+    <list default="true" id="e85c22a8-1bc1-46a6-b22a-2fcbef3fd250" name="Changes" comment="Добавлены handler &quot;about&quot;, get_picture_animal.py - парсит фотки и названия животных, router get_animal_pic.py - handlers, отправляет фотки по запросу.">
+      <change afterPath="$PROJECT_DIR$/app/common/animals_for_quiz.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/common/find_animal_quiz.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/common/questions_with_answers.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/common/save_feedback.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/common/texts_list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/handlers/quiz_handler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/keyboards/reply.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.env" beforeDir="false" afterPath="$PROJECT_DIR$/app/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/common/bot_cmds_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/common/bot_cmds_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/handlers/get_animal_pic.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/handlers/get_animal_pic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/handlers/user_private.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/handlers/user_private.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/picture/get_picture_animal.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/common/get_picture_animal.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" show_ignored="true" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -33,41 +41,45 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Filippokus"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Filippokus&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Filippokus/MoscowZoo_Bot.git",
-    "accountId": "188ea037-8743-427e-aa0d-f54793f6ded9"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Filippokus/MoscowZoo_Bot.git&quot;,
+    &quot;accountId&quot;: &quot;188ea037-8743-427e-aa0d-f54793f6ded9&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2gdPDWiDOYdhheluLVyKnEOeuga" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Run BOT.executor": "Run",
-    "Python.Unnamed.executor": "Run",
-    "Python.get_picture_animal.executor": "Run",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/ProjectsPycharm/Telegram_bots/MoscowZoo_Bot"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Run BOT.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Python.find_animal_quiz.executor&quot;: &quot;Run&quot;,
+    &quot;Python.get_picture_animal.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.quiz_handler.executor&quot;: &quot;Run&quot;,
+    &quot;Python.save_feedback.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/ProjectsPycharm/Telegram_bots/MoscowZoo_Bot&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\ProjectsPycharm\Telegram_bots\MoscowZoo_Bot\app\common" />
       <recent name="C:\ProjectsPycharm\Telegram_bots\MoscowZoo_Bot\app" />
     </key>
   </component>
@@ -120,7 +132,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716024563599</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Добавлены handler &quot;about&quot;, get_picture_animal.py - парсит фотки и названия животных, router get_animal_pic.py - handlers, отправляет фотки по запросу.">
+      <option name="closed" value="true" />
+      <created>1716075761872</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1716075761872</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -148,6 +168,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added main.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="added main.py" />
+    <MESSAGE value="Добавлены handler &quot;about&quot;, get_picture_animal.py - парсит фотки и названия животных, router get_animal_pic.py - handlers, отправляет фотки по запросу." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлены handler &quot;about&quot;, get_picture_animal.py - парсит фотки и названия животных, router get_animal_pic.py - handlers, отправляет фотки по запросу." />
   </component>
 </project>
