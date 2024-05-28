@@ -1,5 +1,3 @@
-"""Сохраняем названия животных и их ссылки на фотографии в файл animals.json"""
-
 import json
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
@@ -28,19 +26,29 @@ try:
 
     # Ищем все элементы с классом 'animal-item'
     elements = soup.find_all('div', class_='animal-item')
-    # print(elements)
+
     # Список для хранения данных
     animals = []
 
     # Обрабатываем каждый элемент
     for element in elements:
         # Извлекаем название животного
-        title = element.find('span', class_='animal-item__title').about_text.strip()
+        title_element = element.find('span', class_='animal-item__title')
+        if title_element:
+            title = title_element.text.strip().title()
+        else:
+            title = "No title"
+
         # Извлекаем ссылку на изображение
-        img_url = element.find('img', class_='animal-item__animal-img')['src']
+        img_element = element.find('img', class_='animal-item__animal-img')
+        if img_element:
+            img_url = img_element['src']
+        else:
+            img_url = "No image"
+
         # Добавляем данные в список
         animals.append({
-            'title': title.title(),
+            'title': title,
             'image_url': img_url
         })
 
@@ -49,7 +57,6 @@ try:
         json.dump(animals, f, ensure_ascii=False, indent=4)
 
     print("Данные успешно сохранены в файл animals.json")
-
 finally:
     # Закрываем драйвер
     driver.quit()
